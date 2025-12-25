@@ -10,3 +10,18 @@ React.js project implementing the Figma design for SaveMom Virtual Maternal Heal
 
 ## How to Run Locally
 1. Clone the repository:
+Open your terminal and run:
+git clone https://github.com/9042266920/Savemom.git
+This will download the project to your local machine.
+
+2. Navigate to the Project Folder:
+cd Savemom
+
+3.Install all required Node.js packages using:
+npm install
+This will install React, Vite, and other necessary libraries.
+
+4.Start the Development Server
+npm start
+The app will open automatically in your default browser.
+If not, visit http://localhost:5173 (Vite default port).
