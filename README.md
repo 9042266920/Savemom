@@ -17,11 +17,11 @@ This will download the project to your local machine.
 2. Navigate to the Project Folder:<br>
 cd Savemom
 
-3.Install all required Node.js packages using:<br>
+3. Install all required Node.js packages using:<br>
 npm install<br>
 This will install React, Vite, and other necessary libraries.
 
-4.Start the Development Server:<br>
+4. Start the Development Server:<br>
 npm start<br>
 The app will open automatically in your default browser.<br>
 If not, visit http://localhost:5173 (Vite default port).
