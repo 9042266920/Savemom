@@ -1,0 +1,29 @@
+### GET all FAQs
+GET http://localhost:5000/api/faqs
+
+###
+
+### CREATE new FAQ
+POST http://localhost:5000/api/faqs
+Content-Type: application/json
+
+{
+  "question": "How does the AI baby cry analysis work ?",
+  "answer": "It records a baby’s cry and uses AI to analyze pitch, frequency, and pattern to detect needs or distress. The system provides real-time alerts to caregivers for faster response."
+}
+
+###
+
+### UPDATE FAQ at index 0
+PUT http://localhost:5000/api/faqs/2
+Content-Type: application/json
+
+{
+  "question": "What is SaveMom 1000-Day Care Program",
+  "answer": "The SaveMom 1000-Day Care Program is an AI-driven maternal and infant healthcare initiative that monitors health risks from pregnancy"
+}
+
+###
+
+### DELETE FAQ at index 0
+DELETE http://localhost:5000/api/faqs/2
