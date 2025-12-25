@@ -1,0 +1,276 @@
+/* =========================================================
+   COMMON SECTION STYLES
+========================================================= */
+.apps-section {
+  text-align: center;
+  padding: 24px 10px 32px; /* reduced top padding */
+  margin-top: 0;           /* prevents extra gap */
+  font-family: "Inter", sans-serif;
+}
+
+/* Section Heading */
+.section-title {
+  font-size: 32px;         /* balanced desktop size */
+  font-weight: 700;        /* bold */
+  margin: 0 0 8px;         /* remove default top margin */
+  color: #22303E;
+  line-height: 1.25;
+}
+
+/* Subtitle */
+.section-subtitle {
+  max-width: 640px;
+  margin: 0 auto 28px;     /* tighter spacing */
+  font-size: 15px;
+  font-weight: 400;
+  color: #667085;
+  line-height: 1.6;
+}
+
+/* Mobile heading */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 28px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+.card-grid {
+  display: grid;
+  gap: 90px;               /* spacing between cards */
+  align-items: stretch;
+  max-width: 1150px;
+  margin: 60px auto;
+  padding: 0 25px;
+}
+
+/* Small mobile spacing */
+@media (max-width: 400px) {
+  .card-grid {
+    gap: 20px;
+    padding: 0 12px;
+  }
+}
+
+/* =========================================================
+   GRID LAYOUT VARIANTS
+========================================================= */
+
+/* 2 cards per row */
+.two-card-layout {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 cards per row */
+.three-card-layout {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4 cards per row */
+.four-card-layout {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 5 cards per row */
+.five-card-layout {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+========================================================= */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .five-card-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .four-card-layout,
+  .three-card-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-card-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .two-card-layout,
+  .three-card-layout,
+  .four-card-layout,
+  .five-card-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   CARD COMPONENT
+========================================================= */
+.card {
+  width: 100%;
+  max-width: 500px;
+  min-height: 260px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 4px 4px 10px 0px #19213D26;
+}
+
+/* Card image */
+.card-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  border-radius: 9px;
+}
+
+/* Card heading */
+.card-heading {
+  margin: 8px 0 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+ 
+}
+
+/* Card paragraph */
+.card-paragraph {
+  margin: 4px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  
+}
+
+/* =========================================================
+   CARD ALIGNMENT VARIANTS
+========================================================= */
+
+/* Center-aligned cards */
+.card-grid.card-center .card {
+  align-items: center;
+  text-align: center;
+}
+
+.card-grid.card-center .card .card-paragraph {
+  text-align: center;
+}
+
+/* Left-aligned cards */
+.card-grid.card-left .card {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.card-grid.card-left .card .card-paragraph {
+  text-align: left;
+}
+
+/* =========================================================
+   SPONSOR / FEATURED MARQUEE
+========================================================= */
+.sponsor-marquee {
+  width: 1440px;
+  max-width: 100%;
+  margin: 2px auto;
+  padding: 60px 130px;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+.sponsor-logo img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.sponsor-logo img:hover {
+  opacity: 1;
+}
+
+/* Responsive marquee */
+@media (max-width: 1024px) {
+  .sponsor-marquee {
+    padding: 48px;
+  }
+
+  .sponsor-logo {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sponsor-marquee {
+    padding: 32px 20px;
+  }
+
+  .sponsor-logo {
+    margin-right: 40px;
+  }
+
+  .sponsor-logo img {
+    width: 48px;
+    height: 26px;
+  }
+}
+
+/* Button styling */
+.feature-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4BC3C6 0%, #2AACB0 100%);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px; /* spacing below button */
+  transition: transform 0.2s ease;
+}
+
+.feature-button:hover {
+  transform: scale(1.05);
+}
+
+
+.feature-separator {
+  display: block;
+  width: 600px;           
+  height: 15px;          
+  opacity: 0.2;           
+  object-fit: cover;      
+  margin: -9px 0 -2px; 
+  transform: rotate(-180deg); 
+  position: relative;
+  top: -9px;   
+  right: -450px;  
+}
+
+

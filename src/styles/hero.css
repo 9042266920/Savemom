@@ -1,0 +1,210 @@
+/* ================= HERO BACKGROUND ================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(52.05% 95.35% at 0% 1.55%,
+      rgba(36, 211, 206, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%),
+    radial-gradient(115.19% 149.18% at 97.01% -15.19%,
+      rgba(36, 211, 206, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%),
+    radial-gradient(54.81% 54.81% at 50% 45.19%,
+      rgba(36, 211, 206, 0.05) 0%,
+      rgba(36, 211, 206, 0) 100%);
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* ================= CONTENT ================= */
+
+.hero-content {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 720;
+  font-size: 43px ;/* ⬆ increased */
+  letter-spacing: -1px;
+  color: #1f2937;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.hero-content p {
+  margin-top: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px; /* ⬆ increased */
+  color: #22303e;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #26c6da;
+  color: #ffffff;
+  border: none;
+  padding: 16px 38px; /* ⬆ increased */
+  border-radius: 32px;
+  font-size: 16px; /* ⬆ increased */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: #ffffff;
+  border: 1.5px solid #26c6da;
+  color: #26c6da;
+  padding: 16px 38px; /* ⬆ increased */
+  border-radius: 32px;
+  font-size: 16px; /* ⬆ increased */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= RECOGNIZED ================= */
+
+.recognized {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.recognized span {
+  font-size: 18px; /* ⬆ slightly increased */
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.logos {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.logos img {
+  height: 48px; /* ⬆ increased */
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================= FLOATING IMAGES ================= */
+
+.hero-card {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* HERO 1 (LEFT TOP) */
+.hero1 {
+  width: clamp(190px, 28vw, 264px);
+  top: 10px;
+  left: -320px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 35px #00000026;
+  --r: 9.26deg;
+}
+
+/* HERO 2 (LEFT BOTTOM) */
+.hero2 {
+  width: clamp(200px, 22vw, 276px);
+  top: 350px;
+  left: -300px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 35px #00000026;
+  --r: -4.26deg;
+  animation-delay: 1s;
+}
+
+/* HERO 3 (RIGHT TOP) */
+.hero3 {
+  width: clamp(260px, 34vw, 491px);
+  top: 11px;
+  right: -320px;
+  border-radius: 20px;
+  box-shadow: -8px 8px 35px #00000026;
+  --r: 7.4deg;
+}
+
+/* HERO 4 (RIGHT BOTTOM) */
+.hero4 {
+  width: clamp(220px, 26vw, 402px);
+  top: 350px;
+  right: -320px;
+  border-radius: 20px;
+  box-shadow: -8px 8px 35px #00000026;
+  --r: -4.81deg;
+  animation-delay: 1.5s;
+}
+
+/* ================= FLOAT ANIMATION ================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(var(--r));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--r));
+  }
+  100% {
+    transform: translateY(0) rotate(var(--r));
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .hero-card {
+    display: none;
+  }
+
+  .hero {
+    padding: 80px 16px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+}
